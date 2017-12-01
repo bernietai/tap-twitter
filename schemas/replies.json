@@ -1,0 +1,125 @@
+{
+  "properties": {
+    "urls": {
+      "items": {
+        "properties": {
+          "expanded_url": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          }
+        },
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "source": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    },
+    "id_str": {
+      "type": "string"
+    },
+    "user": {
+      "properties": {
+        "lang": {
+          "type": "string"
+        },
+        "profile_sidebar_fill_color": {
+          "type": "string"
+        },
+        "favourites_count": {
+          "type": "integer"
+        },
+        "statuses_count": {
+          "type": "integer"
+        },
+        "description": {
+          "type": "string"
+        },
+        "profile_background_color": {
+          "type": "string"
+        },
+        "profile_image_url": {
+          "type": "string"
+        },
+        "friends_count": {
+          "type": "integer"
+        },
+        "utc_offset": {
+          "type": "integer"
+        },
+        "location": {
+          "type": "string"
+        },
+        "listed_count": {
+          "type": "integer"
+        },
+        "time_zone": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": "string"
+        },
+        "screen_name": {
+          "type": "string"
+        },
+        "profile_background_image_url": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "profile_link_color": {
+          "type": "string"
+        },
+        "geo_enabled": {
+          "type": "boolean"
+        },
+        "profile_text_color": {
+          "type": "string"
+        },
+        "followers_count": {
+          "type": "integer"
+        },
+        "id": {
+          "type": "integer"
+        }
+      },
+      "type": "object"
+    },
+    "lang": {
+      "type": "string"
+    },
+    "id": {
+      "type": "integer"
+    },
+    "user_mentions": {
+      "items": {
+        "properties": {
+          "screen_name": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "id": {
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      },
+      "type": "array"
+    }
+  },
+  "type": "object"
+}

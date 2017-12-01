@@ -1,0 +1,108 @@
+{
+  "type": "object",
+  "properties": {
+    "created_at": {
+      "type": "string"
+    },
+    "hashtags": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "text": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "user": {
+      "type": "object",
+      "properties": {
+        "profile_image_url": {
+          "type": "string"
+        },
+        "screen_name": {
+          "type": "string"
+        },
+        "profile_link_color": {
+          "type": "string"
+        },
+        "geo_enabled": {
+          "type": "boolean"
+        },
+        "location": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": "string"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "statuses_count": {
+          "type": "integer"
+        },
+        "listed_count": {
+          "type": "integer"
+        },
+        "url": {
+          "type": "string"
+        },
+        "profile_sidebar_fill_color": {
+          "type": "string"
+        },
+        "time_zone": {
+          "type": "string"
+        },
+        "followers_count": {
+          "type": "integer"
+        },
+        "favourites_count": {
+          "type": "integer"
+        },
+        "friends_count": {
+          "type": "integer"
+        },
+        "utc_offset": {
+          "type": "integer"
+        },
+        "profile_text_color": {
+          "type": "string"
+        },
+        "lang": {
+          "type": "string"
+        },
+        "profile_background_image_url": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "profile_background_color": {
+          "type": "string"
+        }
+      }
+    },
+    "source": {
+      "type": "string"
+    },
+    "id": {
+      "type": "integer"
+    },
+    "lang": {
+      "type": "string"
+    },
+    "retweet_count": {
+      "type": "integer"
+    },
+    "id_str": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    }
+  }
+}

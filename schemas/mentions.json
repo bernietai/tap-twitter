@@ -1,0 +1,120 @@
+{
+  "properties": {
+    "user": {
+      "properties": {
+        "listed_count": {
+          "type": "integer"
+        },
+        "time_zone": {
+          "type": "string"
+        },
+        "followers_count": {
+          "type": "integer"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "name": {
+          "type": "string"
+        },
+        "screen_name": {
+          "type": "string"
+        },
+        "friends_count": {
+          "type": "integer"
+        },
+        "description": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": "string"
+        },
+        "favourites_count": {
+          "type": "integer"
+        },
+        "profile_link_color": {
+          "type": "string"
+        },
+        "utc_offset": {
+          "type": "integer"
+        },
+        "statuses_count": {
+          "type": "integer"
+        },
+        "profile_image_url": {
+          "type": "string"
+        },
+        "profile_sidebar_fill_color": {
+          "type": "string"
+        },
+        "profile_text_color": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "profile_background_color": {
+          "type": "string"
+        },
+        "lang": {
+          "type": "string"
+        },
+        "following": {
+          "type": "boolean"
+        },
+        "profile_background_image_url": {
+          "type": "string"
+        },
+        "profile_banner_url": {
+          "type": "string"
+        }
+      },
+      "type": "object"
+    },
+    "text": {
+      "type": "string"
+    },
+    "user_mentions": {
+      "items": {
+        "properties": {
+          "screen_name": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "id": {
+            "type": "integer"
+          }
+        },
+        "type": "object"
+      },
+      "type": "array"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "lang": {
+      "type": "string"
+    },
+    "in_reply_to_status_id": {
+      "type": "integer"
+    },
+    "in_reply_to_screen_name": {
+      "type": "string"
+    },
+    "id": {
+      "type": "integer"
+    },
+    "in_reply_to_user_id": {
+      "type": "integer"
+    },
+    "source": {
+      "type": "string"
+    },
+    "id_str": {
+      "type": "string"
+    }
+  },
+  "type": "object"
+}

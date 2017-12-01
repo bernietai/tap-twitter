@@ -1,0 +1,100 @@
+{
+  "type": "object",
+  "properties": {
+    "mode": {
+      "type": "string"
+    },
+    "full_name": {
+      "type": "string"
+    },
+    "user": {
+      "type": "object",
+      "properties": {
+        "location": {
+          "type": "string"
+        },
+        "screen_name": {
+          "type": "string"
+        },
+        "created_at": {
+          "type": "string"
+        },
+        "profile_sidebar_fill_color": {
+          "type": "string"
+        },
+        "time_zone": {
+          "type": "string"
+        },
+        "profile_text_color": {
+          "type": "string"
+        },
+        "profile_background_image_url": {
+          "type": "string"
+        },
+        "favourites_count": {
+          "type": "integer"
+        },
+        "profile_link_color": {
+          "type": "string"
+        },
+        "statuses_count": {
+          "type": "integer"
+        },
+        "friends_count": {
+          "type": "integer"
+        },
+        "followers_count": {
+          "type": "integer"
+        },
+        "geo_enabled": {
+          "type": "boolean"
+        },
+        "listed_count": {
+          "type": "integer"
+        },
+        "url": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "lang": {
+          "type": "string"
+        },
+        "description": {
+          "type": "string"
+        },
+        "profile_background_color": {
+          "type": "string"
+        },
+        "utc_offset": {
+          "type": "integer"
+        },
+        "id": {
+          "type": "integer"
+        },
+        "profile_image_url": {
+          "type": "string"
+        }
+      }
+    },
+    "following": {
+      "type": "boolean"
+    },
+    "name": {
+      "type": "string"
+    },
+    "id": {
+      "type": "integer"
+    },
+    "uri": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string"
+    },
+    "member_count": {
+      "type": "integer"
+    }
+  }
+}

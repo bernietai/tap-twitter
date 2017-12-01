@@ -1,0 +1,108 @@
+{
+  "properties": {
+    "description": {
+      "type": "string"
+    },
+    "favourites_count": {
+      "type": "integer"
+    },
+    "followers_count": {
+      "type": "integer"
+    },
+    "friends_count": {
+      "type": "integer"
+    },
+    "created_at": {
+      "type": "string"
+    },
+    "default_profile": {
+      "type": "boolean"
+    },
+    "profile_text_color": {
+      "type": "string"
+    },
+    "lang": {
+      "type": "string"
+    },
+    "id": {
+      "type": "integer"
+    },
+    "name": {
+      "type": "string"
+    },
+    "statuses_count": {
+      "type": "integer"
+    },
+    "screen_name": {
+      "type": "string"
+    },
+    "profile_banner_url": {
+      "type": "string"
+    },
+    "profile_image_url": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "profile_sidebar_fill_color": {
+      "type": "string"
+    },
+    "status": {
+      "properties": {
+        "in_reply_to_screen_name": {
+          "type":"string"
+        },
+        "text": {
+          "type":"string"
+        },
+        "source": {
+          "type": "string"
+        },
+        "in_reply_to_user_id": {
+          "type":"integer"
+        },
+        "id": {
+          "type":"integer"
+        },
+        "user_mentions": {
+          "type": "array",
+          "items": {
+            "properties": {
+              "screen_name": {
+                "type":"string"
+              },
+              "id": {
+                "type":"integer"
+              },
+              "name": {
+                "type":"string"
+              }
+            },
+            "type":"object"
+          }
+        },
+        "created_at": {
+          "type":"string"
+        },
+        "in_reply_to_status_id": {
+          "type":"integer"
+        },
+        "id_str": {
+          "type":"string"
+        },
+        "lang": {
+          "type":"string"
+        }
+      },
+      "type": "object"
+    },
+    "profile_link_color": {
+      "type": "string"
+    },
+    "profile_background_color": {
+      "type": "string"
+    }
+  },
+  "type":"object"
+}

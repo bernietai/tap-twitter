@@ -1,0 +1,26 @@
+{
+	
+	"bookmarks": {
+		"favorites" : {
+			"since_id":0
+		},
+		"home_timeline" : {
+			"since_id":0
+		},
+		"mentions" : {
+			"since_id":0
+		},
+		"replies" : {
+			"since_id":0
+		},
+		"retweets_of_me" : {
+			"since_id":0
+		},		
+		"user_retweets" : {
+			"since_id":0
+		},
+		"user_timeline" : {
+			"since_id":0
+		}
+	}
+}

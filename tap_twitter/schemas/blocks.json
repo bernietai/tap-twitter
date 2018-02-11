@@ -1,4 +1,6 @@
 {
+  "type":"object",
+  "additionalProperties":false,
   "properties": {
     "description": {
       "type": "string"
@@ -93,7 +95,13 @@
         },
         "lang": {
           "type":"string"
-        }
+        },
+        "hashtags": {
+          "type":"string"
+        },
+        "urls": {
+          "type":"string"
+        } 
       },
       "type": "object"
     },
@@ -103,6 +111,5 @@
     "profile_background_color": {
       "type": "string"
     }
-  },
-  "type":"object"
+  }
 }

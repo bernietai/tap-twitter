@@ -1,0 +1,2863 @@
+{
+    "streams": [
+        {
+            "tap_stream_id": "blocks",
+            "schema": {
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "status": {
+                        "type": "object",
+                        "properties": {
+                            "source": {
+                                "type": "string"
+                            },
+                            "id": {
+                                "type": "integer"
+                            },
+                            "lang": {
+                                "type": "string"
+                            },
+                            "in_reply_to_user_id": {
+                                "type": "integer"
+                            },
+                            "text": {
+                                "type": "string"
+                            },
+                            "in_reply_to_status_id": {
+                                "type": "integer"
+                            },
+                            "user_mentions": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "type": "integer"
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "screen_name": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            },
+                            "in_reply_to_screen_name": {
+                                "type": "string"
+                            },
+                            "created_at": {
+                                "type": "string"
+                            },
+                            "id_str": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "profile_banner_url": {
+                        "type": "string"
+                    },
+                    "screen_name": {
+                        "type": "string"
+                    },
+                    "friends_count": {
+                        "type": "integer"
+                    },
+                    "profile_image_url": {
+                        "type": "string"
+                    },
+                    "default_profile": {
+                        "type": "boolean"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "profile_sidebar_fill_color": {
+                        "type": "string"
+                    },
+                    "favourites_count": {
+                        "type": "integer"
+                    },
+                    "location": {
+                        "type": "string"
+                    },
+                    "profile_link_color": {
+                        "type": "string"
+                    },
+                    "profile_background_color": {
+                        "type": "string"
+                    },
+                    "profile_text_color": {
+                        "type": "string"
+                    },
+                    "lang": {
+                        "type": "string"
+                    },
+                    "statuses_count": {
+                        "type": "integer"
+                    },
+                    "created_at": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "followers_count": {
+                        "type": "integer"
+                    }
+                },
+                "type": "object",
+                "additionalProperties": false,
+                "selected":false
+            },
+            "stream": "blocks",
+            "metadata": [
+                {
+                    "inclusion": "automatic",
+                    "breadcrumb": [
+                        "properties",
+                        "since_id"
+                    ]
+                }
+            ],
+            "key_properties": [
+                "id"
+            ]
+        },
+        {
+            "tap_stream_id": "favorites",
+            "replication_key": [
+                "since_id"
+            ],
+            "schema": {
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "retweeted": {
+                        "type": "boolean"
+                    },
+                    "in_reply_to_user_id": {
+                        "type": "integer"
+                    },
+                    "text": {
+                        "type": "string"
+                    },
+                    "quoted_status": {
+                        "type": "object",
+                        "properties": {
+                            "source": {
+                                "type": "string"
+                            },
+                            "place": {
+                                "type": "object",
+                                "properties": {
+                                    "full_name": {
+                                        "type": "string"
+                                    },
+                                    "id": {
+                                        "type": [
+                                            "integer",
+                                            "string"
+                                        ]
+                                    },
+                                    "bounding_box": {
+                                        "type": "object",
+                                        "properties": {
+                                            "type": {
+                                                "type": "string"
+                                            },
+                                            "coordinates": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "array",
+                                                        "items": {
+                                                            "type": "number"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    },
+                                    "place_type": {
+                                        "type": "string"
+                                    },
+                                    "url": {
+                                        "type": "string"
+                                    },
+                                    "country": {
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "country_code": {
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "retweet_count": {
+                                "type": "integer"
+                            },
+                            "urls": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "expanded_url": {
+                                            "type": "string"
+                                        },
+                                        "url": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            },
+                            "user": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "integer"
+                                    },
+                                    "screen_name": {
+                                        "type": "string"
+                                    },
+                                    "profile_banner_url": {
+                                        "type": "string"
+                                    },
+                                    "url": {
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "utc_offset": {
+                                        "type": "integer"
+                                    },
+                                    "time_zone": {
+                                        "type": "string"
+                                    },
+                                    "favourites_count": {
+                                        "type": "integer"
+                                    },
+                                    "listed_count": {
+                                        "type": "integer"
+                                    },
+                                    "profile_link_color": {
+                                        "type": "string"
+                                    },
+                                    "profile_background_color": {
+                                        "type": "string"
+                                    },
+                                    "profile_text_color": {
+                                        "type": "string"
+                                    },
+                                    "statuses_count": {
+                                        "type": "integer"
+                                    },
+                                    "created_at": {
+                                        "type": "string"
+                                    },
+                                    "lang": {
+                                        "type": "string"
+                                    },
+                                    "friends_count": {
+                                        "type": "integer"
+                                    },
+                                    "profile_image_url": {
+                                        "type": "string"
+                                    },
+                                    "followers_count": {
+                                        "type": "integer"
+                                    },
+                                    "profile_sidebar_fill_color": {
+                                        "type": "string"
+                                    },
+                                    "profile_background_tile": {
+                                        "type": "boolean"
+                                    },
+                                    "profile_background_image_url": {
+                                        "type": "string"
+                                    },
+                                    "location": {
+                                        "type": "string"
+                                    },
+                                    "geo_enabled": {
+                                        "type": "boolean"
+                                    },
+                                    "description": {
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "text": {
+                                "type": "string"
+                            },
+                            "truncated": {
+                                "type": "boolean"
+                            },
+                            "id": {
+                                "type": [
+                                    "string",
+                                    "integer"
+                                ]
+                            },
+                            "user_mentions": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "type": "integer"
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "screen_name": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            },
+                            "id_str": {
+                                "type": "string"
+                            },
+                            "favorite_count": {
+                                "type": "integer"
+                            },
+                            "created_at": {
+                                "type": "string"
+                            },
+                            "lang": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "favorited": {
+                        "type": "boolean"
+                    },
+                    "in_reply_to_screen_name": {
+                        "type": "string"
+                    },
+                    "favorite_count": {
+                        "type": "integer"
+                    },
+                    "hashtags": {
+                        "items": {
+                            "properties": {
+                                "text": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "in_reply_to_status_id": {
+                        "type": "integer"
+                    },
+                    "media": {
+                        "items": {
+                            "properties": {
+                                "id": {
+                                    "type": "integer"
+                                },
+                                "display_url": {
+                                    "type": "string"
+                                },
+                                "sizes": {
+                                    "type": "object",
+                                    "properties": {
+                                        "thumb": {
+                                            "type": "object",
+                                            "properties": {
+                                                "resize": {
+                                                    "type": "string"
+                                                },
+                                                "h": {
+                                                    "type": "integer"
+                                                },
+                                                "w": {
+                                                    "type": "integer"
+                                                }
+                                            }
+                                        },
+                                        "small": {
+                                            "type": "object",
+                                            "properties": {
+                                                "resize": {
+                                                    "type": "string"
+                                                },
+                                                "h": {
+                                                    "type": "integer"
+                                                },
+                                                "w": {
+                                                    "type": "integer"
+                                                }
+                                            }
+                                        },
+                                        "medium": {
+                                            "type": "object",
+                                            "properties": {
+                                                "resize": {
+                                                    "type": "string"
+                                                },
+                                                "h": {
+                                                    "type": "integer"
+                                                },
+                                                "w": {
+                                                    "type": "integer"
+                                                }
+                                            }
+                                        },
+                                        "large": {
+                                            "type": "object",
+                                            "properties": {
+                                                "resize": {
+                                                    "type": "string"
+                                                },
+                                                "h": {
+                                                    "type": "integer"
+                                                },
+                                                "w": {
+                                                    "type": "integer"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "type": {
+                                    "type": "string"
+                                },
+                                "media_url": {
+                                    "type": "string"
+                                },
+                                "expanded_url": {
+                                    "type": "string"
+                                },
+                                "url": {
+                                    "type": "string"
+                                },
+                                "media_url_https": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "lang": {
+                        "type": "string"
+                    },
+                    "source": {
+                        "type": "string"
+                    },
+                    "place": {
+                        "type": "object",
+                        "properties": {
+                            "full_name": {
+                                "type": "string"
+                            },
+                            "id": {
+                                "type": "string"
+                            },
+                            "attributes": {
+                                "items": {}
+                            },
+                            "bounding_box": {
+                                "type": "object",
+                                "properties": {
+                                    "type": {
+                                        "type": "string"
+                                    },
+                                    "coordinates": {
+                                        "type": "array",
+                                        "items": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "number"
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            },
+                            "place_type": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string"
+                            },
+                            "country": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "country_code": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "retweet_count": {
+                        "type": "integer"
+                    },
+                    "urls": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "expanded_url": {
+                                    "type": "string"
+                                },
+                                "url": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "user": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "integer"
+                            },
+                            "screen_name": {
+                                "type": "string"
+                            },
+                            "profile_banner_url": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "utc_offset": {
+                                "type": "integer"
+                            },
+                            "time_zone": {
+                                "type": "string"
+                            },
+                            "favourites_count": {
+                                "type": "integer"
+                            },
+                            "listed_count": {
+                                "type": "integer"
+                            },
+                            "profile_link_color": {
+                                "type": "string"
+                            },
+                            "profile_background_color": {
+                                "type": "string"
+                            },
+                            "profile_text_color": {
+                                "type": "string"
+                            },
+                            "statuses_count": {
+                                "type": "integer"
+                            },
+                            "created_at": {
+                                "type": "string"
+                            },
+                            "lang": {
+                                "type": "string"
+                            },
+                            "friends_count": {
+                                "type": "integer"
+                            },
+                            "profile_image_url": {
+                                "type": "string"
+                            },
+                            "followers_count": {
+                                "type": "integer"
+                            },
+                            "profile_sidebar_fill_color": {
+                                "type": "string"
+                            },
+                            "profile_background_image_url": {
+                                "type": "string"
+                            },
+                            "location": {
+                                "type": "string"
+                            },
+                            "geo_enabled": {
+                                "type": "boolean"
+                            },
+                            "description": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "truncated": {
+                        "type": "boolean"
+                    },
+                    "user_mentions": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "type": "integer"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "screen_name": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "id_str": {
+                        "type": "string"
+                    },
+                    "quoted_status_id_str": {
+                        "type": "string"
+                    },
+                    "quoted_status_id": {
+                        "type": "integer"
+                    },
+                    "created_at": {
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "additionalProperties": false,
+                "selected":false
+            },
+            "stream": "favorites",
+            "metadata": [
+                {
+                    "metadata": {
+                        "inclusion": "automatic"
+                    },
+                    "breadcrumb": [
+                        "properties",
+                        "since_id"
+                    ]
+                }
+            ],
+            "key_properties": [
+                "id"
+            ],
+            "replication_method": "INCREMENTAL"
+        },
+        {
+            "tap_stream_id": "followers",
+            "schema": {
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "status": {
+                        "type": "object",
+                        "properties": {
+                            "source": {
+                                "type": "string"
+                            },
+                            "id": {
+                                "type": "integer"
+                            },
+                            "favorite_count": {
+                                "type": "integer"
+                            },
+                            "urls": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "expanded_url": {
+                                            "type": "string"
+                                        },
+                                        "url": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            },
+                            "text": {
+                                "type": "string"
+                            },
+                            "lang": {
+                                "type": "string"
+                            },
+                            "created_at": {
+                                "type": "string"
+                            },
+                            "id_str": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "screen_name": {
+                        "type": "string"
+                    },
+                    "friends_count": {
+                        "type": "integer"
+                    },
+                    "profile_image_url": {
+                        "type": "string"
+                    },
+                    "followers_count": {
+                        "type": "integer"
+                    },
+                    "url": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "profile_sidebar_fill_color": {
+                        "type": "string"
+                    },
+                    "utc_offset": {
+                        "type": "integer"
+                    },
+                    "time_zone": {
+                        "type": "string"
+                    },
+                    "profile_background_image_url": {
+                        "type": "string"
+                    },
+                    "location": {
+                        "type": "string"
+                    },
+                    "profile_link_color": {
+                        "type": "string"
+                    },
+                    "profile_background_color": {
+                        "type": "string"
+                    },
+                    "profile_text_color": {
+                        "type": "string"
+                    },
+                    "following": {
+                        "type": "boolean"
+                    },
+                    "statuses_count": {
+                        "type": "integer"
+                    },
+                    "created_at": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "lang": {
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "additionalProperties": false,
+                "selected":false
+            },
+            "stream": "followers",
+            "metadata": [
+                {
+                    "metadata": {
+                        "inclusion": "automatic"
+                    },
+                    "breadcrumb": [
+                        "properties",
+                        "since_id"
+                    ]
+                }
+            ],
+            "key_properties": [
+                "id"
+            ]
+        },
+        {
+            "tap_stream_id": "friends",
+            "schema": {
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "status": {
+                        "type": "object",
+                        "properties": {
+                            "source": {
+                                "type": "string"
+                            },
+                            "id": {
+                                "type": "integer"
+                            },
+                            "favorite_count": {
+                                "type": "integer"
+                            },
+                            "urls": {
+                                "type": "array",
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "expanded_url": {
+                                            "type": "string"
+                                        },
+                                        "url": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            },
+                            "text": {
+                                "type": "string"
+                            },
+                            "lang": {
+                                "type": "string"
+                            },
+                            "created_at": {
+                                "type": "string"
+                            },
+                            "id_str": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "screen_name": {
+                        "type": "string"
+                    },
+                    "friends_count": {
+                        "type": "integer"
+                    },
+                    "profile_image_url": {
+                        "type": "string"
+                    },
+                    "url": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "followers_count": {
+                        "type": "integer"
+                    },
+                    "time_zone": {
+                        "type": "string"
+                    },
+                    "utc_offset": {
+                        "type": "integer"
+                    },
+                    "profile_sidebar_fill_color": {
+                        "type": "string"
+                    },
+                    "profile_background_image_url": {
+                        "type": "string"
+                    },
+                    "location": {
+                        "type": "string"
+                    },
+                    "profile_link_color": {
+                        "type": "string"
+                    },
+                    "profile_background_color": {
+                        "type": "string"
+                    },
+                    "profile_text_color": {
+                        "type": "string"
+                    },
+                    "following": {
+                        "type": "boolean"
+                    },
+                    "statuses_count": {
+                        "type": "integer"
+                    },
+                    "created_at": {
+                        "type": "string"
+                    },
+                    "description": {
+                        "type": "string"
+                    },
+                    "lang": {
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "additionalProperties": false,
+                "selected":false
+            },
+            "stream": "friends",
+            "metadata": [
+                {
+                    "metadata": {
+                        "inclusion": "automatic"
+                    },
+                    "breadcrumb": [
+                        "properties",
+                        "since_id"
+                    ]
+                }
+            ],
+            "key_properties": [
+                "id"
+            ]
+        },
+        {
+            "tap_stream_id": "home_timeline",
+            "replication_key": [
+                "since_id"
+            ],
+            "schema": {
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "retweeted": {
+                        "type": "boolean"
+                    },
+                    "in_reply_to_user_id": {
+                        "type": "integer"
+                    },
+                    "text": {
+                        "type": "string"
+                    },
+                    "favorited": {
+                        "type": "boolean"
+                    },
+                    "in_reply_to_screen_name": {
+                        "type": "string"
+                    },
+                    "favorite_count": {
+                        "type": "integer"
+                    },
+                    "hashtags": {
+                        "items": {
+                            "properties": {
+                                "text": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "in_reply_to_status_id": {
+                        "type": "integer"
+                    },
+                    "created_at": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "lang": {
+                        "type": "string"
+                    },
+                    "source": {
+                        "type": "string"
+                    },
+                    "quoted_status": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "integer"
+                            },
+                            "retweet_count": {
+                                "type": "integer"
+                            },
+                            "urls": {
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "expanded_url": {
+                                            "type": "string"
+                                        },
+                                        "url": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            },
+                            "user": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "integer"
+                                    }
+                                }
+                            },
+                            "text": {
+                                "type": "string"
+                            },
+                            "truncated": {
+                                "type": "boolean"
+                            },
+                            "user_mentions": {
+                                "items": {
+                                    "properties": {
+                                        "text": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            },
+                            "id_str": {
+                                "type": "string"
+                            },
+                            "favorite_count": {
+                                "type": "integer"
+                            },
+                            "souce": {
+                                "type": "integer"
+                            },
+                            "hashtags": {
+                                "items": {
+                                    "properties": {
+                                        "text": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            },
+                            "created_at": {
+                                "type": "string",
+                                "format": "date-time"
+                            },
+                            "lang": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "retweet_count": {
+                        "type": "integer"
+                    },
+                    "urls": {
+                        "items": {
+                            "properties": {
+                                "expanded_url": {
+                                    "type": "string"
+                                },
+                                "url": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "user": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "integer"
+                            },
+                            "screen_name": {
+                                "type": "string"
+                            },
+                            "friends_count": {
+                                "type": "integer"
+                            },
+                            "url": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "utc_offset": {
+                                "type": "integer"
+                            },
+                            "profile_sidebar_fill_color": {
+                                "type": "string"
+                            },
+                            "favourites_count": {
+                                "type": "integer"
+                            },
+                            "listed_count": {
+                                "type": "integer"
+                            },
+                            "profile_link_color": {
+                                "type": "string"
+                            },
+                            "profile_background_color": {
+                                "type": "string"
+                            },
+                            "profile_text_color": {
+                                "type": "string"
+                            },
+                            "statuses_count": {
+                                "type": "integer"
+                            },
+                            "created_at": {
+                                "type": "string",
+                                "format": "date-time"
+                            },
+                            "lang": {
+                                "type": "string"
+                            },
+                            "profile_image_url": {
+                                "type": "string"
+                            },
+                            "followers_count": {
+                                "type": "integer"
+                            },
+                            "time_zone": {
+                                "type": "string"
+                            },
+                            "profile_background_image_url": {
+                                "type": "string"
+                            },
+                            "location": {
+                                "type": "string"
+                            },
+                            "geo_enabled": {
+                                "type": "boolean"
+                            },
+                            "description": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "truncated": {
+                        "type": "boolean"
+                    },
+                    "user_mentions": {
+                        "items": {
+                            "properties": {
+                                "id": {
+                                    "type": "integer"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "screen_name": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "id_str": {
+                        "type": "string"
+                    },
+                    "quoted_status_id_str": {
+                        "type": "string"
+                    },
+                    "retweeted_status": {
+                        "type": "object",
+                        "properties": {
+                            "source": {
+                                "type": "string"
+                            },
+                            "retweet_count": {
+                                "type": "integer"
+                            },
+                            "urls": {
+                                "items": {
+                                    "properties": {
+                                        "expanded_url": {
+                                            "type": "string"
+                                        },
+                                        "url": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            },
+                            "user": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "integer"
+                                    },
+                                    "screen_name": {
+                                        "type": "string"
+                                    },
+                                    "friends_count": {
+                                        "type": "integer"
+                                    },
+                                    "url": {
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "utc_offset": {
+                                        "type": "integer"
+                                    },
+                                    "profile_sidebar_fill_color": {
+                                        "type": "string"
+                                    },
+                                    "favourites_count": {
+                                        "type": "integer"
+                                    },
+                                    "listed_count": {
+                                        "type": "integer"
+                                    },
+                                    "profile_link_color": {
+                                        "type": "string"
+                                    },
+                                    "profile_background_color": {
+                                        "type": "string"
+                                    },
+                                    "profile_text_color": {
+                                        "type": "string"
+                                    },
+                                    "statuses_count": {
+                                        "type": "integer"
+                                    },
+                                    "created_at": {
+                                        "type": "string",
+                                        "format": "date-time"
+                                    },
+                                    "lang": {
+                                        "type": "string"
+                                    },
+                                    "profile_image_url": {
+                                        "type": "string"
+                                    },
+                                    "followers_count": {
+                                        "type": "integer"
+                                    },
+                                    "time_zone": {
+                                        "type": "string"
+                                    },
+                                    "profile_background_image_url": {
+                                        "type": "string"
+                                    },
+                                    "location": {
+                                        "type": "string"
+                                    },
+                                    "geo_enabled": {
+                                        "type": "boolean"
+                                    },
+                                    "description": {
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "text": {
+                                "type": "string"
+                            },
+                            "user_mentions": {
+                                "items": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "integer"
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "screen_name": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            },
+                            "retweeted": {
+                                "type": "boolean"
+                            },
+                            "media": {
+                                "items": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "integer"
+                                        },
+                                        "display_url": {
+                                            "type": "string"
+                                        },
+                                        "sizes": {
+                                            "type": "object",
+                                            "properties": {
+                                                "thumb": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "resize": {
+                                                            "type": "string"
+                                                        },
+                                                        "h": {
+                                                            "type": "integer"
+                                                        },
+                                                        "w": {
+                                                            "type": "integer"
+                                                        }
+                                                    }
+                                                },
+                                                "small": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "resize": {
+                                                            "type": "string"
+                                                        },
+                                                        "h": {
+                                                            "type": "integer"
+                                                        },
+                                                        "w": {
+                                                            "type": "integer"
+                                                        }
+                                                    }
+                                                },
+                                                "medium": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "resize": {
+                                                            "type": "string"
+                                                        },
+                                                        "h": {
+                                                            "type": "integer"
+                                                        },
+                                                        "w": {
+                                                            "type": "integer"
+                                                        }
+                                                    }
+                                                },
+                                                "large": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "resize": {
+                                                            "type": "string"
+                                                        },
+                                                        "h": {
+                                                            "type": "integer"
+                                                        },
+                                                        "w": {
+                                                            "type": "integer"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "type": {
+                                            "type": "string"
+                                        },
+                                        "media_url": {
+                                            "type": "string"
+                                        },
+                                        "expanded_url": {
+                                            "type": "string"
+                                        },
+                                        "url": {
+                                            "type": "string"
+                                        },
+                                        "media_url_https": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "quoted_status_id": {
+                        "type": "integer"
+                    },
+                    "media": {
+                        "items": {
+                            "properties": {
+                                "id": {
+                                    "type": "integer"
+                                },
+                                "display_url": {
+                                    "type": "string"
+                                },
+                                "sizes": {
+                                    "type": "object",
+                                    "properties": {
+                                        "thumb": {
+                                            "type": "object",
+                                            "properties": {
+                                                "resize": {
+                                                    "type": "string"
+                                                },
+                                                "h": {
+                                                    "type": "integer"
+                                                },
+                                                "w": {
+                                                    "type": "integer"
+                                                }
+                                            }
+                                        },
+                                        "small": {
+                                            "type": "object",
+                                            "properties": {
+                                                "resize": {
+                                                    "type": "string"
+                                                },
+                                                "h": {
+                                                    "type": "integer"
+                                                },
+                                                "w": {
+                                                    "type": "integer"
+                                                }
+                                            }
+                                        },
+                                        "medium": {
+                                            "type": "object",
+                                            "properties": {
+                                                "resize": {
+                                                    "type": "string"
+                                                },
+                                                "h": {
+                                                    "type": "integer"
+                                                },
+                                                "w": {
+                                                    "type": "integer"
+                                                }
+                                            }
+                                        },
+                                        "large": {
+                                            "type": "object",
+                                            "properties": {
+                                                "resize": {
+                                                    "type": "string"
+                                                },
+                                                "h": {
+                                                    "type": "integer"
+                                                },
+                                                "w": {
+                                                    "type": "integer"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "type": {
+                                    "type": "string"
+                                },
+                                "media_url": {
+                                    "type": "string"
+                                },
+                                "expanded_url": {
+                                    "type": "string"
+                                },
+                                "url": {
+                                    "type": "string"
+                                },
+                                "media_url_https": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    }
+                },
+                "type": "object",
+                "additionalProperties": false,
+                "selected":true
+            },
+            "stream": "home_timeline",
+            "metadata": [
+                {
+                    "inclusion": "automatic",
+                    "breadcrumb": [
+                        "properties",
+                        "since_id"
+                    ]
+                }
+            ],
+            "key_properties": [
+                    "id"
+            ],
+            "replication_method": "INCREMENTAL"
+        },
+        {
+            "tap_stream_id": "lists",
+            "schema": {
+                "properties": {
+                    "full_name": {
+                        "type": "string"
+                    },
+                    "id": {
+                        "type": "integer"
+                    },
+                    "uri": {
+                        "type": "string"
+                    },
+                    "member_count": {
+                        "type": "integer"
+                    },
+                    "user": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "integer"
+                            },
+                            "screen_name": {
+                                "type": "string"
+                            },
+                            "friends_count": {
+                                "type": "integer"
+                            },
+                            "url": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "utc_offset": {
+                                "type": "integer"
+                            },
+                            "profile_sidebar_fill_color": {
+                                "type": "string"
+                            },
+                            "favourites_count": {
+                                "type": "integer"
+                            },
+                            "listed_count": {
+                                "type": "integer"
+                            },
+                            "profile_link_color": {
+                                "type": "string"
+                            },
+                            "profile_background_color": {
+                                "type": "string"
+                            },
+                            "profile_text_color": {
+                                "type": "string"
+                            },
+                            "statuses_count": {
+                                "type": "integer"
+                            },
+                            "created_at": {
+                                "type": "string"
+                            },
+                            "lang": {
+                                "type": "string"
+                            },
+                            "profile_image_url": {
+                                "type": "string"
+                            },
+                            "followers_count": {
+                                "type": "integer"
+                            },
+                            "time_zone": {
+                                "type": "string"
+                            },
+                            "profile_background_image_url": {
+                                "type": "string"
+                            },
+                            "location": {
+                                "type": "string"
+                            },
+                            "geo_enabled": {
+                                "type": "boolean"
+                            },
+                            "description": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "following": {
+                        "type": "boolean"
+                    },
+                    "mode": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "slug": {
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "additionalProperties": false,
+                "selected":false
+            },
+            "stream": "lists",
+            "metadata": [
+                {
+                    "metadata": {
+                        "inclusion": "automatic"
+                    },
+                    "breadcrumb": [
+                        "properties",
+                        "since_id"
+                    ]
+                }
+            ],
+            "key_properties": [
+                "id"
+            ]
+        },
+        {
+            "tap_stream_id": "memberships",
+            "schema": {
+                "properties": {
+                    "full_name": {
+                        "type": "string"
+                    },
+                    "id": {
+                        "type": "integer"
+                    },
+                    "mode": {
+                        "type": "string"
+                    },
+                    "user": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "integer"
+                            },
+                            "profile_banner_url": {
+                                "type": "string"
+                            },
+                            "screen_name": {
+                                "type": "string"
+                            },
+                            "friends_count": {
+                                "type": "integer"
+                            },
+                            "profile_image_url": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "followers_count": {
+                                "type": "integer"
+                            },
+                            "time_zone": {
+                                "type": "string"
+                            },
+                            "utc_offset": {
+                                "type": "integer"
+                            },
+                            "profile_sidebar_fill_color": {
+                                "type": "string"
+                            },
+                            "favourites_count": {
+                                "type": "integer"
+                            },
+                            "profile_background_image_url": {
+                                "type": "string"
+                            },
+                            "listed_count": {
+                                "type": "integer"
+                            },
+                            "location": {
+                                "type": "string"
+                            },
+                            "profile_link_color": {
+                                "type": "string"
+                            },
+                            "profile_background_color": {
+                                "type": "string"
+                            },
+                            "profile_text_color": {
+                                "type": "string"
+                            },
+                            "statuses_count": {
+                                "type": "integer"
+                            },
+                            "created_at": {
+                                "type": "string"
+                            },
+                            "description": {
+                                "type": "string"
+                            },
+                            "lang": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "member_count": {
+                        "type": "integer"
+                    },
+                    "uri": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "slug": {
+                        "type": "string"
+                    },
+                    "subscriber_count": {
+                        "type": "integer"
+                    }
+                },
+                "type": "object",
+                "additionalProperties": false,
+                "selected":false
+            },
+            "stream": "memberships",
+            "metadata": [
+                {
+                    "metadata": {
+                        "inclusion": "automatic"
+                    },
+                    "breadcrumb": [
+                        "properties",
+                        "since_id"
+                    ]
+                }
+            ],
+            "key_properties": [
+                "id"
+            ]
+        },
+        {
+            "tap_stream_id": "mentions",
+            "replication_key": [
+                "since_id"
+            ],
+            "schema": {
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "source": {
+                        "type": "string"
+                    },
+                    "in_reply_to_user_id": {
+                        "type": "integer"
+                    },
+                    "user": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "integer"
+                            },
+                            "screen_name": {
+                                "type": "string"
+                            },
+                            "friends_count": {
+                                "type": "integer"
+                            },
+                            "url": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "utc_offset": {
+                                "type": "integer"
+                            },
+                            "profile_sidebar_fill_color": {
+                                "type": "string"
+                            },
+                            "favourites_count": {
+                                "type": "integer"
+                            },
+                            "listed_count": {
+                                "type": "integer"
+                            },
+                            "profile_link_color": {
+                                "type": "string"
+                            },
+                            "profile_background_color": {
+                                "type": "string"
+                            },
+                            "profile_text_color": {
+                                "type": "string"
+                            },
+                            "following": {
+                                "type": "boolean"
+                            },
+                            "statuses_count": {
+                                "type": "integer"
+                            },
+                            "created_at": {
+                                "type": "string"
+                            },
+                            "lang": {
+                                "type": "string"
+                            },
+                            "profile_banner_url": {
+                                "type": "string"
+                            },
+                            "profile_image_url": {
+                                "type": "string"
+                            },
+                            "followers_count": {
+                                "type": "integer"
+                            },
+                            "time_zone": {
+                                "type": "string"
+                            },
+                            "profile_background_image_url": {
+                                "type": "string"
+                            },
+                            "description": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "text": {
+                        "type": "string"
+                    },
+                    "in_reply_to_screen_name": {
+                        "type": "string"
+                    },
+                    "id_str": {
+                        "type": "string"
+                    },
+                    "user_mentions": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "type": "integer"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "screen_name": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "in_reply_to_status_id": {
+                        "type": "integer"
+                    },
+                    "created_at": {
+                        "type": "string"
+                    },
+                    "lang": {
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "additionalProperties": false,
+                "selected":false
+            },
+            "stream": "mentions",
+            "metadata": [
+                {
+                    "metadata": {
+                        "inclusion": "automatic"
+                    },
+                    "breadcrumb": [
+                        "properties",
+                        "since_id"
+                    ]
+                }
+            ],
+            "key_properties": [
+                "id"
+            ],
+            "replication_method": "INCREMENTAL"
+        },
+        {
+            "tap_stream_id": "replies",
+            "replication_key": [
+                "since_id"
+            ],
+            "schema": {
+                "properties": {
+                    "source": {
+                        "type": "string"
+                    },
+                    "id": {
+                        "type": "integer"
+                    },
+                    "urls": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "expanded_url": {
+                                    "type": "string"
+                                },
+                                "url": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "user": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "integer"
+                            },
+                            "screen_name": {
+                                "type": "string"
+                            },
+                            "friends_count": {
+                                "type": "integer"
+                            },
+                            "url": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "utc_offset": {
+                                "type": "integer"
+                            },
+                            "time_zone": {
+                                "type": "string"
+                            },
+                            "favourites_count": {
+                                "type": "integer"
+                            },
+                            "listed_count": {
+                                "type": "integer"
+                            },
+                            "profile_link_color": {
+                                "type": "string"
+                            },
+                            "profile_background_color": {
+                                "type": "string"
+                            },
+                            "profile_text_color": {
+                                "type": "string"
+                            },
+                            "statuses_count": {
+                                "type": "integer"
+                            },
+                            "created_at": {
+                                "type": "string"
+                            },
+                            "lang": {
+                                "type": "string"
+                            },
+                            "profile_image_url": {
+                                "type": "string"
+                            },
+                            "followers_count": {
+                                "type": "integer"
+                            },
+                            "profile_sidebar_fill_color": {
+                                "type": "string"
+                            },
+                            "profile_background_image_url": {
+                                "type": "string"
+                            },
+                            "location": {
+                                "type": "string"
+                            },
+                            "geo_enabled": {
+                                "type": "boolean"
+                            },
+                            "description": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "text": {
+                        "type": "string"
+                    },
+                    "user_mentions": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "type": "integer"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "screen_name": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "lang": {
+                        "type": "string"
+                    },
+                    "created_at": {
+                        "type": "string"
+                    },
+                    "id_str": {
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "additionalProperties": false,
+                "selected":false
+            },
+            "stream": "replies",
+            "metadata": [
+                {
+                    "metadata": {
+                        "inclusion": "automatic"
+                    },
+                    "breadcrumb": [
+                        "properties",
+                        "since_id"
+                    ]
+                }
+            ],
+            "key_properties": [
+                "id"
+            ],
+            "replication_method": "INCREMENTAL"
+        },
+        {
+            "tap_stream_id": "retweets_of_me",
+            "replication_key": [
+                "since_id"
+            ],
+            "schema": {
+                "properties": {
+                    "source": {
+                        "type": "string"
+                    },
+                    "id": {
+                        "type": "integer"
+                    },
+                    "retweet_count": {
+                        "type": "integer"
+                    },
+                    "text": {
+                        "type": "string"
+                    },
+                    "user": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "integer"
+                            },
+                            "screen_name": {
+                                "type": "string"
+                            },
+                            "friends_count": {
+                                "type": "integer"
+                            },
+                            "url": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "utc_offset": {
+                                "type": "integer"
+                            },
+                            "time_zone": {
+                                "type": "string"
+                            },
+                            "favourites_count": {
+                                "type": "integer"
+                            },
+                            "listed_count": {
+                                "type": "integer"
+                            },
+                            "profile_link_color": {
+                                "type": "string"
+                            },
+                            "profile_background_color": {
+                                "type": "string"
+                            },
+                            "profile_text_color": {
+                                "type": "string"
+                            },
+                            "statuses_count": {
+                                "type": "integer"
+                            },
+                            "created_at": {
+                                "type": "string"
+                            },
+                            "lang": {
+                                "type": "string"
+                            },
+                            "profile_image_url": {
+                                "type": "string"
+                            },
+                            "followers_count": {
+                                "type": "integer"
+                            },
+                            "profile_sidebar_fill_color": {
+                                "type": "string"
+                            },
+                            "profile_background_image_url": {
+                                "type": "string"
+                            },
+                            "location": {
+                                "type": "string"
+                            },
+                            "geo_enabled": {
+                                "type": "boolean"
+                            },
+                            "description": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "hashtags": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "text": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "id_str": {
+                        "type": "string"
+                    },
+                    "created_at": {
+                        "type": "string"
+                    },
+                    "lang": {
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "additionalProperties": false,
+                "selected":false
+            },
+            "stream": "retweets_of_me",
+            "metadata": [
+                {
+                    "metadata": {
+                        "inclusion": "automatic"
+                    },
+                    "breadcrumb": [
+                        "properties",
+                        "since_id"
+                    ]
+                }
+            ],
+            "key_properties": [
+                "id"
+            ],
+            "replication_method": "INCREMENTAL"
+        },
+        {
+            "tap_stream_id": "subscriptions",
+            "schema": {
+                "properties": {
+                    "full_name": {
+                        "type": "string"
+                    },
+                    "id": {
+                        "type": "integer"
+                    },
+                    "uri": {
+                        "type": "string"
+                    },
+                    "user": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "integer"
+                            },
+                            "screen_name": {
+                                "type": "string"
+                            },
+                            "profile_banner_url": {
+                                "type": "string"
+                            },
+                            "url": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "utc_offset": {
+                                "type": "integer"
+                            },
+                            "time_zone": {
+                                "type": "string"
+                            },
+                            "favourites_count": {
+                                "type": "integer"
+                            },
+                            "listed_count": {
+                                "type": "integer"
+                            },
+                            "profile_link_color": {
+                                "type": "string"
+                            },
+                            "profile_background_color": {
+                                "type": "string"
+                            },
+                            "profile_text_color": {
+                                "type": "string"
+                            },
+                            "statuses_count": {
+                                "type": "integer"
+                            },
+                            "verified": {
+                                "type": "boolean"
+                            },
+                            "lang": {
+                                "type": "string"
+                            },
+                            "friends_count": {
+                                "type": "integer"
+                            },
+                            "profile_image_url": {
+                                "type": "string"
+                            },
+                            "followers_count": {
+                                "type": "integer"
+                            },
+                            "profile_sidebar_fill_color": {
+                                "type": "string"
+                            },
+                            "created_at": {
+                                "type": "string"
+                            },
+                            "profile_background_image_url": {
+                                "type": "string"
+                            },
+                            "location": {
+                                "type": "string"
+                            },
+                            "geo_enabled": {
+                                "type": "boolean"
+                            },
+                            "description": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "member_count": {
+                        "type": "integer"
+                    },
+                    "following": {
+                        "type": "boolean"
+                    },
+                    "mode": {
+                        "type": "string"
+                    },
+                    "name": {
+                        "type": "string"
+                    },
+                    "slug": {
+                        "type": "string"
+                    },
+                    "subscriber_count": {
+                        "type": "integer"
+                    }
+                },
+                "type": "object",
+                "additionalProperties": false,
+                "selected":false
+            },
+            "stream": "subscriptions",
+            "metadata": [
+                {
+                    "metadata": {
+                        "inclusion": "automatic"
+                    },
+                    "breadcrumb": [
+                        "properties",
+                        "since_id"
+                    ]
+                }
+            ],
+            "key_properties": [
+                "id"
+            ]
+        },
+        {
+            "tap_stream_id": "user_retweets",
+            "replication_key": [
+                "since_id"
+            ],
+            "schema": {
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "source": {
+                        "type": "string"
+                    },
+                    "urls": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "expanded_url": {
+                                    "type": "string"
+                                },
+                                "url": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "user": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "integer"
+                            },
+                            "screen_name": {
+                                "type": "string"
+                            },
+                            "friends_count": {
+                                "type": "integer"
+                            },
+                            "url": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "utc_offset": {
+                                "type": "integer"
+                            },
+                            "time_zone": {
+                                "type": "string"
+                            },
+                            "favourites_count": {
+                                "type": "integer"
+                            },
+                            "listed_count": {
+                                "type": "integer"
+                            },
+                            "profile_link_color": {
+                                "type": "string"
+                            },
+                            "profile_background_color": {
+                                "type": "string"
+                            },
+                            "profile_text_color": {
+                                "type": "string"
+                            },
+                            "statuses_count": {
+                                "type": "integer"
+                            },
+                            "created_at": {
+                                "type": "string"
+                            },
+                            "lang": {
+                                "type": "string"
+                            },
+                            "profile_image_url": {
+                                "type": "string"
+                            },
+                            "followers_count": {
+                                "type": "integer"
+                            },
+                            "profile_sidebar_fill_color": {
+                                "type": "string"
+                            },
+                            "profile_background_image_url": {
+                                "type": "string"
+                            },
+                            "location": {
+                                "type": "string"
+                            },
+                            "geo_enabled": {
+                                "type": "boolean"
+                            },
+                            "description": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "text": {
+                        "type": "string"
+                    },
+                    "id_str": {
+                        "type": "string"
+                    },
+                    "user_mentions": {
+                        "type": "array",
+                        "items": {
+                            "type": "object",
+                            "properties": {
+                                "id": {
+                                    "type": "integer"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "screen_name": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "created_at": {
+                        "type": "string"
+                    },
+                    "lang": {
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "additionalProperties": false,
+                "selected":false
+            },
+            "stream": "user_retweets",
+            "metadata": [
+                {
+                    "metadata": {
+                        "inclusion": "automatic"
+                    },
+                    "breadcrumb": [
+                        "properties",
+                        "since_id"
+                    ]
+                }
+            ],
+            "key_properties": [
+                "id"
+            ],
+            "replication_method": "INCREMENTAL"
+        },
+        {
+            "tap_stream_id": "user_timeline",
+            "replication_key": [
+                "since_id"
+            ],
+            "schema": {
+                "properties": {
+                    "id": {
+                        "type": "integer"
+                    },
+                    "source": {
+                        "type": "string"
+                    },
+                    "retweet_count": {
+                        "type": "integer"
+                    },
+                    "in_reply_to_user_id": {
+                        "type": "integer"
+                    },
+                    "user": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "type": "integer"
+                            },
+                            "screen_name": {
+                                "type": "string"
+                            },
+                            "friends_count": {
+                                "type": "integer"
+                            },
+                            "url": {
+                                "type": "string"
+                            },
+                            "name": {
+                                "type": "string"
+                            },
+                            "utc_offset": {
+                                "type": "integer"
+                            },
+                            "profile_sidebar_fill_color": {
+                                "type": "string"
+                            },
+                            "favourites_count": {
+                                "type": "integer"
+                            },
+                            "listed_count": {
+                                "type": "integer"
+                            },
+                            "profile_link_color": {
+                                "type": "string"
+                            },
+                            "profile_background_color": {
+                                "type": "string"
+                            },
+                            "profile_text_color": {
+                                "type": "string"
+                            },
+                            "statuses_count": {
+                                "type": "integer"
+                            },
+                            "created_at": {
+                                "type": "string",
+                                "format": "date-time"
+                            },
+                            "lang": {
+                                "type": "string"
+                            },
+                            "profile_image_url": {
+                                "type": "string"
+                            },
+                            "followers_count": {
+                                "type": "integer"
+                            },
+                            "time_zone": {
+                                "type": "string"
+                            },
+                            "profile_background_image_url": {
+                                "type": "string"
+                            },
+                            "location": {
+                                "type": "string"
+                            },
+                            "geo_enabled": {
+                                "type": "boolean"
+                            },
+                            "description": {
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "text": {
+                        "type": "string"
+                    },
+                    "favorited": {
+                        "type": "boolean"
+                    },
+                    "user_mentions": {
+                        "items": {
+                            "properties": {
+                                "id": {
+                                    "type": "integer"
+                                },
+                                "name": {
+                                    "type": "string"
+                                },
+                                "screen_name": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "in_reply_to_screen_name": {
+                        "type": "string"
+                    },
+                    "quoted_status_id": {
+                        "type": "integer"
+                    },
+                    "created_at": {
+                        "type": "string",
+                        "format": "date-time"
+                    },
+                    "favorite_count": {
+                        "type": "integer"
+                    },
+                    "quoted_status_id_str": {
+                        "type": "string"
+                    },
+                    "retweeted": {
+                        "type": "boolean"
+                    },
+                    "urls": {
+                        "items": {
+                            "properties": {
+                                "expanded_url": {
+                                    "type": "string"
+                                },
+                                "url": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "retweeted_status": {
+                        "type": "object",
+                        "properties": {
+                            "source": {
+                                "type": "string"
+                            },
+                            "retweet_count": {
+                                "type": "integer"
+                            },
+                            "urls": {
+                                "items": {
+                                    "properties": {
+                                        "expanded_url": {
+                                            "type": "string"
+                                        },
+                                        "url": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            },
+                            "user": {
+                                "type": "object",
+                                "properties": {
+                                    "id": {
+                                        "type": "integer"
+                                    },
+                                    "screen_name": {
+                                        "type": "string"
+                                    },
+                                    "friends_count": {
+                                        "type": "integer"
+                                    },
+                                    "url": {
+                                        "type": "string"
+                                    },
+                                    "name": {
+                                        "type": "string"
+                                    },
+                                    "utc_offset": {
+                                        "type": "integer"
+                                    },
+                                    "profile_sidebar_fill_color": {
+                                        "type": "string"
+                                    },
+                                    "favourites_count": {
+                                        "type": "integer"
+                                    },
+                                    "listed_count": {
+                                        "type": "integer"
+                                    },
+                                    "profile_link_color": {
+                                        "type": "string"
+                                    },
+                                    "profile_background_color": {
+                                        "type": "string"
+                                    },
+                                    "profile_text_color": {
+                                        "type": "string"
+                                    },
+                                    "statuses_count": {
+                                        "type": "integer"
+                                    },
+                                    "created_at": {
+                                        "type": "string",
+                                        "format": "date-time"
+                                    },
+                                    "lang": {
+                                        "type": "string"
+                                    },
+                                    "profile_image_url": {
+                                        "type": "string"
+                                    },
+                                    "followers_count": {
+                                        "type": "integer"
+                                    },
+                                    "time_zone": {
+                                        "type": "string"
+                                    },
+                                    "profile_background_image_url": {
+                                        "type": "string"
+                                    },
+                                    "location": {
+                                        "type": "string"
+                                    },
+                                    "geo_enabled": {
+                                        "type": "boolean"
+                                    },
+                                    "description": {
+                                        "type": "string"
+                                    }
+                                }
+                            },
+                            "text": {
+                                "type": "string"
+                            },
+                            "user_mentions": {
+                                "items": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "integer"
+                                        },
+                                        "name": {
+                                            "type": "string"
+                                        },
+                                        "screen_name": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            },
+                            "retweeted": {
+                                "type": "boolean"
+                            },
+                            "media": {
+                                "items": {
+                                    "properties": {
+                                        "id": {
+                                            "type": "integer"
+                                        },
+                                        "display_url": {
+                                            "type": "string"
+                                        },
+                                        "sizes": {
+                                            "type": "object",
+                                            "properties": {
+                                                "thumb": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "resize": {
+                                                            "type": "string"
+                                                        },
+                                                        "h": {
+                                                            "type": "integer"
+                                                        },
+                                                        "w": {
+                                                            "type": "integer"
+                                                        }
+                                                    }
+                                                },
+                                                "small": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "resize": {
+                                                            "type": "string"
+                                                        },
+                                                        "h": {
+                                                            "type": "integer"
+                                                        },
+                                                        "w": {
+                                                            "type": "integer"
+                                                        }
+                                                    }
+                                                },
+                                                "medium": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "resize": {
+                                                            "type": "string"
+                                                        },
+                                                        "h": {
+                                                            "type": "integer"
+                                                        },
+                                                        "w": {
+                                                            "type": "integer"
+                                                        }
+                                                    }
+                                                },
+                                                "large": {
+                                                    "type": "object",
+                                                    "properties": {
+                                                        "resize": {
+                                                            "type": "string"
+                                                        },
+                                                        "h": {
+                                                            "type": "integer"
+                                                        },
+                                                        "w": {
+                                                            "type": "integer"
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "type": {
+                                            "type": "string"
+                                        },
+                                        "media_url": {
+                                            "type": "string"
+                                        },
+                                        "expanded_url": {
+                                            "type": "string"
+                                        },
+                                        "url": {
+                                            "type": "string"
+                                        },
+                                        "media_url_https": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "hashtags": {
+                        "items": {
+                            "properties": {
+                                "text": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "id_str": {
+                        "type": "string"
+                    },
+                    "in_reply_to_status_id": {
+                        "type": "integer"
+                    },
+                    "media": {
+                        "items": {
+                            "properties": {
+                                "id": {
+                                    "type": "integer"
+                                },
+                                "display_url": {
+                                    "type": "string"
+                                },
+                                "sizes": {
+                                    "type": "object",
+                                    "properties": {
+                                        "thumb": {
+                                            "type": "object",
+                                            "properties": {
+                                                "resize": {
+                                                    "type": "string"
+                                                },
+                                                "h": {
+                                                    "type": "integer"
+                                                },
+                                                "w": {
+                                                    "type": "integer"
+                                                }
+                                            }
+                                        },
+                                        "small": {
+                                            "type": "object",
+                                            "properties": {
+                                                "resize": {
+                                                    "type": "string"
+                                                },
+                                                "h": {
+                                                    "type": "integer"
+                                                },
+                                                "w": {
+                                                    "type": "integer"
+                                                }
+                                            }
+                                        },
+                                        "medium": {
+                                            "type": "object",
+                                            "properties": {
+                                                "resize": {
+                                                    "type": "string"
+                                                },
+                                                "h": {
+                                                    "type": "integer"
+                                                },
+                                                "w": {
+                                                    "type": "integer"
+                                                }
+                                            }
+                                        },
+                                        "large": {
+                                            "type": "object",
+                                            "properties": {
+                                                "resize": {
+                                                    "type": "string"
+                                                },
+                                                "h": {
+                                                    "type": "integer"
+                                                },
+                                                "w": {
+                                                    "type": "integer"
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "type": {
+                                    "type": "string"
+                                },
+                                "media_url": {
+                                    "type": "string"
+                                },
+                                "expanded_url": {
+                                    "type": "string"
+                                },
+                                "url": {
+                                    "type": "string"
+                                },
+                                "media_url_https": {
+                                    "type": "string"
+                                }
+                            }
+                        }
+                    },
+                    "lang": {
+                        "type": "string"
+                    }
+                },
+                "type": "object",
+                "additionalProperties": false,
+                "selected":false
+            },
+            "stream": "user_timeline",
+            "metadata": [
+                {
+                    "metadata": {
+                        "inclusion": "automatic"
+                    },
+                    "breadcrumb": [
+                        "properties",
+                        "since_id"
+                    ]
+                }
+            ],
+            "key_properties": [
+                "id"
+            ],
+            "replication_method": "INCREMENTAL"
+        }
+    ]
+}

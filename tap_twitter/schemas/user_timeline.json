@@ -1,4 +1,5 @@
-{   "type": "object",
+{   
+    "type":"object",
     "additionalProperties":false,                
     "properties": {
         "created_at": {
@@ -325,6 +326,18 @@
                         },
                         "utc_offset": {
                             "type": "integer"
+                        },
+                        "default_profile": {
+                            "type": "string"
+                        },
+                        "following": {
+                            "type": "string"
+                        },
+                        "profile_banner_url": {
+                            "type": "string"
+                        },
+                        "verified": {
+                            "type": "string"
                         }
                     }
                 },
@@ -342,6 +355,33 @@
                             } 
                         }
                     }
+                },
+                "created_at": {
+                    "type": "string"
+                },
+                "favorite_count": {
+                    "type": "integer"
+                },
+                "favorited": {
+                    "type": "string"
+                },
+                "hashtags": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "integer"
+                },
+                "id_str": {
+                    "type": "string"
+                },
+                "lang": {
+                    "type": "string"
+                },
+                "scopes": {
+                    "type": "string"
+                },
+                "truncated": {
+                    "type": "string"
                 }
             }
         },

@@ -1,4 +1,6 @@
 {
+  "type":"object",
+  "additionalProperties":false,
   "properties": {
     "profile_image_url": {
       "type": "string"
@@ -66,6 +68,54 @@
             "type": "object"
           },
           "type": "array"
+        },
+        "coordinates": {
+          "type": "string"
+        },
+        "favorited": {
+          "type": "string"
+        },
+        "geo": {
+          "type": "string"
+        },
+        "hashtags": {
+          "type": "string"
+        },
+        "in_reply_to_screen_name": {
+          "type": "string"
+        },
+        "in_reply_to_status_id": {
+          "type": "string"
+        },
+        "in_reply_to_user_id": {
+          "type": "string"
+        },
+        "media": {
+          "type": "string"
+        },
+        "place": {
+          "type": "string"
+        },
+        "possibly_sensitive": {
+          "type": "string"
+        },
+        "quoted_status_id": {
+          "type": "string"
+        },
+        "quoted_status_id_str": {
+          "type": "string"
+        },
+        "retweet_count": {
+          "type": "integer"
+        },
+        "retweeted_status": {
+          "type": "string"
+        },
+        "truncated": {
+          "type": "string"
+        },
+        "user_mentions": {
+          "type": "string"
         }
       },
       "type": "object"
@@ -99,7 +149,33 @@
     },
     "statuses_count": {
       "type": "integer"
+    },
+    "default_profile": {
+      "type": "string"
+    },
+    "default_profile_image": {
+      "type": "string"
+    },
+    "favourites_count": {
+      "type": "integer"
+    },
+    "geo_enabled": {
+      "type": "string"
+    },
+    "listed_count": {
+      "type": "integer"
+    },
+    "profile_background_tile": {
+      "type": "string"
+    },
+    "profile_banner_url": {
+      "type": "string"
+    },
+    "protected": {
+      "type": "string"
+    },
+    "verified": {
+      "type": "string"
     }
-  },
-  "type": "object"
+  }  
 }

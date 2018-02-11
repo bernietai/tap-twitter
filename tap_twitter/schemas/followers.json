@@ -1,5 +1,6 @@
 {
-  "type": "object",
+  "type":"object",
+  "additionalProperties":false,  
   "properties": {
     "followers_count": {
       "type": "integer"
@@ -101,6 +102,86 @@
     },
     "utc_offset": {
       "type": "integer"
+    },
+    "favorite_count": {
+      "type": "integer"
+    },
+    "hashtags": {
+      "type": "string"
+    },
+    "id_str": {
+      "type": "string"
+    },
+    "media": {
+      "type": "string"
+    },
+    "quoted_status": {
+      "type": "string"
+    },
+    "quoted_status_id": {
+      "type": "integer"
+    },
+    "quoted_status_id_str": {
+      "type": "string"
+    },
+    "retweet_count": {
+      "type": "integer"
+    },
+    "retweeted_status": {
+      "type": "string"
+    },
+    "source": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    },
+    "truncated": {
+      "type": "string"
+    },
+    "urls": {
+      "type": "string"
+    },
+    "user": {
+      "type": "string"
+    },
+    "user_mentions": {
+      "type": "string"
+    },
+    "place": {
+      "type": "object",
+      "properties": {
+        "contained_within": {
+          "type": "string"
+        },
+        "attributes": {
+          "type": "string"
+        },
+        "bounding_box": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "country_code": {
+          "type": "string"
+        },
+        "full_name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },  
+        "name": {
+          "type": "string"
+        },
+        "place_type": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      }
     }
   }
 }

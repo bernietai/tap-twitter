@@ -73,6 +73,18 @@
         },
         "profile_image_url": {
           "type":"string"
+        },
+        "following": {
+          "type": "string"
+        },
+        "profile_background_tile": {
+          "type": "string"
+        },
+        "verified": {
+          "type": "string"
+        },
+        "default_profile": {
+          "type": "string"
         }
       }
     },
@@ -341,6 +353,18 @@
             },
             "profile_image_url": {
               "type": "string"
+            },
+            "hashtags": {
+              "type": "string"
+            },
+            "quoted_status_id": {
+              "type": "integer"
+            },
+            "quoted_status_id_str": {
+              "type": "string"
+            },
+            "verified": {
+              "type": "string"
             }
           }
         },
@@ -447,6 +471,15 @@
         },
         "id": {
           "type": ["string", "integer"]
+        },
+        "hashtags": {
+          "type": "string"
+        },
+        "quoted_status_id": {
+          "type": "integer"
+        },
+        "quoted_status_id_str": {
+          "type": "string"
         }
       }
     },
@@ -487,6 +520,44 @@
     },
     "favorited": {
       "type": "boolean"
+    },
+    "retweeted_status": {
+      "type": "string"
+    },
+    "place": {
+      "type": "object",
+      "properties": {    
+        "contained_within": {
+          "type": "string"
+        },
+        "attributes": {
+          "type": "string"
+        },
+        "bounding_box": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        },
+        "country_code": {
+          "type": "string"
+        },
+        "full_name": {
+          "type": "string"
+        },
+        "id": {
+          "type": "string"
+        },
+        "name": {
+          "type": "string"
+        },
+        "place_type": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      }          
     }
   }
 }

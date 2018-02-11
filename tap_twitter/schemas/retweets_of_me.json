@@ -1,5 +1,6 @@
 {
-  "type": "object",
+  "type":"object",
+  "additionalProperties":false,  
   "properties": {
     "created_at": {
       "type": "string"
@@ -102,6 +103,15 @@
       "type": "string"
     },
     "text": {
+      "type": "string"
+    },
+    "favorite_count": {
+      "type": "integer"
+    },
+    "urls": {
+      "type": "string"
+    },
+    "user_mentions": {
       "type": "string"
     }
   }

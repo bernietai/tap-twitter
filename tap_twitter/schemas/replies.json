@@ -1,4 +1,6 @@
 {
+  "type":"object",
+  "additionalProperties":false,
   "properties": {
     "urls": {
       "items": {
@@ -119,7 +121,24 @@
         "type": "object"
       },
       "type": "array"
+    },
+    "favorite_count": {
+      "type": "integer"
+    },
+    "hashtags": {
+      "type": "string"
+    },
+    "in_reply_to_screen_name": {
+      "type": "string"
+    },
+    "in_reply_to_status_id": {
+      "type": "integer"
+    },
+    "in_reply_to_user_id": {
+      "type": "integer"
+    },
+    "retweet_count": {
+      "type": "integer"
     }
-  },
-  "type": "object"
+  }
 }

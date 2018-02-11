@@ -1,4 +1,5 @@
-{   "type": "object",
+{   
+    "type":"object",
     "additionalProperties":false,                
     "properties": {
         "created_at": {
@@ -184,7 +185,76 @@
                     "properties":{
                         "id":{
                             "type":"integer"
-                        }
+                        }, 
+                        "created_at":{
+                            "type":"string"
+                        },
+                        "description":{
+                            "type":"string"
+                        },
+                        "favourites_count":{
+                            "type":"integer"
+                        },
+                        "followers_count":{
+                            "type":"integer"
+                        },
+                        "friends_count":{
+                            "type":"integer"
+                        },
+                        "geo_enabled":{
+                            "type":"boolean"
+                        },
+                        "lang":{
+                            "type":"string"
+                        },
+                        "listed_count":{
+                            "type":"integer"
+                        },
+                        "location":{
+                            "type":"string"
+                        },
+                        "name":{
+                            "type":"string"
+                        },               
+                        "profile_background_color":{
+                            "type":"string"
+                        },
+                        "profile_background_image_url":{
+                            "type":"string"
+                        },                 
+                        "profile_banner_url":{
+                            "type":"string"
+                        },
+                        "profile_image_url":{
+                            "type":"string"
+                        },
+                        "profile_link_color":{
+                            "type":"string"
+                        },
+                        "profile_sidebar_fill_color":{
+                            "type":"string"
+                        },
+                        "profile_text_color":{
+                            "type":"string"
+                        },                  
+                        "screen_name":{
+                            "type":"string"
+                        },
+                        "statuses_count":{
+                            "type":"integer"
+                        },
+                        "time_zone":{
+                            "type":"string"
+                        },
+                        "url":{
+                            "type":"string"
+                        },
+                        "utc_offset":{
+                            "type":"string"
+                        },
+                        "verified":{
+                            "type":"string"
+                        }                                                                 
                     }
                 },
                 "user_mentions":{
@@ -195,6 +265,12 @@
                             }
                         }
                     } 
+                },
+                "media":{
+                    "type":"string"
+                },
+                "source":{
+                    "type":"string"
                 }
             }
         }, 
@@ -394,6 +470,18 @@
                         },
                         "utc_offset": {
                             "type": "integer"
+                        },
+                        "following":{
+                            "type":"string"
+                        },
+                        "profile_background_tile":{
+                            "type":"string"
+                        },
+                        "profile_banner_url":{
+                            "type":"string"
+                        },
+                        "verified":{
+                            "type":"string"
                         }
                     }
                 },
@@ -411,6 +499,36 @@
                             } 
                         }
                     }
+                },
+                "created_at":{
+                    "type":"string"
+                },
+                "favorite_count":{
+                    "type":"integer"
+                },
+                "hashtags":{
+                    "type":"string"
+                },                
+                "id":{
+                    "type":"integer"
+                },
+                "id_str":{
+                    "type":"string"
+                },
+                "lang":{
+                    "type":"string"
+                },
+                "quoted_status":{
+                    "type":"string"
+                },     
+                "quoted_status_id":{
+                    "type":"integer"
+                },
+                "quoted_status_id_str":{
+                    "type":"string"
+                },
+                "truncated":{
+                    "type":"string"
                 }
             }
         },
@@ -478,6 +596,12 @@
                 "profile_background_image_url": {
                     "type": "string"
                 },
+                "profile_background_tile": {
+                    "type": "string"
+                },   
+                "profile_banner_url": {
+                    "type": "string"
+                },
                 "profile_image_url": {
                     "type": "string"
                 },
@@ -504,6 +628,12 @@
                 },
                 "utc_offset": {
                     "type": "integer"
+                },
+                "verified": {
+                    "type": "string"
+                },
+                "following": {
+                    "type": "string"
                 }
             }
         },

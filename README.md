@@ -4,7 +4,7 @@ Thank you for using my Singer Twitter Tap.
 
 This tap: 
 
-- Outputs *count* records from a selection of Twitter resources
+- Outputs [count] records from a selection of Twitter *streams*
   - Blocks
   - Favorites
   - Followers
@@ -18,48 +18,45 @@ This tap:
   - Subscriptions
   - User Retweets 
   - User Timeline
-- Outputs *schema* for each Twitter resource
-- Outputs *state* data. Some data, for instance, *since_id* in the "mentions" stream, can be used to perform delta requests
+- Outputs *schema* for each selected Twitter stream
+- Outputs *state* data. *since_id* can be used to perform delta requests on selected Twitter streams
 
 ### Install
 
 ```pip install tap-twitter```
 
-### Step by Step
-
 ### Step 1: Create a Twitter App
 
-To create a Twitter App for use with this Tap, visit [Twitter Apps](https://apps.twitter.com)
+You require a Twitter developer account. Visit [Twitter Apps](https://apps.twitter.com)
 
 ### Step 2: Configure stream and parameters
 
-Each Twitter resource is a stream. 
-
-You will need to configure Twitter App details in tap-twitter/config.json. 
+Once you have setup a Twitter App, provide requires details in *tap-twitter/config.json*. 
 
   - **start_date** (Optional). Not used in Twitter API queries, leave as "1971-01-01 00:00:00"
-  - **consumer_key**
-  - **consumer_secret**
-  - **count** - number of records to retrieve. All streams
+  - **consumer_key** - See your Twitter App setup. 
+  - **consumer_secret** - See your Twitter App setup. 
+  - **count** - number of records to retrieve. Applies to all streams. Default 10
 
+Do not edit *request_token_url*, *access_token_url*, *authorize_url*
 
-### Step 3: Select Stream
+### Step 3: Select Stream(s)
 
-In *tap-twitter/catalog.json*, to query 1 or more of the following streams, set its "schema" > "selected" value to "True". 
+To query 1 or more of the following Twitter streams, in *tap-twitter/catalog.json*, set its "schema" > "selected" value to "True". 
 
-  1.  blocks
-  1. favorites
-  1. followers
-  1. friends
-  1. home_timeline
-  1. lists
-  1. memberships
-  1. mentions
-  1. replies
-  1. retweets_of_me 
-  1. subscriptions
-  1. user_retweets
-  1. user_timeline
+  1. Blocks
+  1. Favorites
+  1. Followers
+  1. Friends
+  1. Home_timeline
+  1. Lists
+  1. Memberships
+  1. Mentions
+  1. Replies
+  1. Retweets_of_me 
+  1. Subscriptions
+  1. User_retweets
+  1. User_timeline
 
 For example, to get a list of mentions: 
 
@@ -80,7 +77,7 @@ For example, to get a list of mentions:
 
 ### Step 4: Run Twitter Tap (1st time)
 
-It is necessary to setup Twitter credentials when running this Tap for the first time (i.e. access token). Once credentials are setup, it can be reused in subsequent requests. Credentials are stored in ~/.credentials/twitter.json
+When running tap for the first time, it is necessary to setup Twitter *credentials*. Once credentials are setup, it can be reused in subsequent requests. Credentials are stored in ~/.credentials/twitter.json
 
 Run: ```tap-twitter -c tap-twitter/config.json``` without piping to a target. You will be prompted to authorize Twitter: 
 
@@ -89,11 +86,11 @@ Run: ```tap-twitter -c tap-twitter/config.json``` without piping to a target. Yo
 > Have you authorized me? (y/n) 0768235
 > What is the PIN? 0768235
 > Access Token:
-> oauth_token = 16900279-b9uN27YEtYdHsrFOd932wGrFzYwBXbcOpRwNfrOQW
-> oauth_token_secret = FirCxFzLdD1oyL3KRKorMvf4wzjmcSG41VSG3Kudxrt1P
+> oauth_token = 16900279-b9uN27YEtYdHsrFOd932wGrFzYwBXbcOpRwNfrOQw
+> oauth_token_secret = FirCxFzLdD1oyL3KRKorMvf4wzjmcSG41VSG3Kudxrt1p
 > You may now access protected resources using the access tokens above. 
 
-Now you can pipe twitter results to a Singer Target e.g.
+Now you can pipe stream results to a Singer Target e.g.
 
 ``` tap-twitter -c tap-twitter/config.json -s tap-twitter/state.json | target-gsheet -c gsheet.config.json```
 
@@ -101,6 +98,6 @@ Please fav my Tap repo! Appreciate feedback if you are using this Tap, thanks.
 
 ### Credits
 
-* [Python Twitter](https://github.com/bear/python-twitter) by the Python-Twitter Developers
+* [Python Twitter](https://github.com/bear/python-twitter) by Python-Twitter Developers
 
 Copyright 2018 [Bernard Tai](http://bernardtai.net)

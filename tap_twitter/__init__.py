@@ -172,7 +172,6 @@ class Stream(object):
 class IncrementalStream(Stream):
     """ Declare incremental stream type """
     state = attr.ib()
-    
     def _iterate(self, recordset):
         """ iterate stream items """
         max_bookmark = None

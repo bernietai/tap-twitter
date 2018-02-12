@@ -5,7 +5,7 @@ Thank you for using my Singer Twitter Tap.
 This tap: 
 
 - Outputs [count] records from a selection of Twitter *streams*
-  - Blocks
+  - Blocks 
   - Favorites
   - Followers
   - Friends
@@ -44,11 +44,11 @@ Do not edit *request_token_url*, *access_token_url*, *authorize_url*
 
 To query 1 or more of the following Twitter streams, in *tap-twitter/catalog.json*, set its "schema" > "selected" value to "True". 
 
-  1. Blocks
+  1. Blocks 
   1. Favorites
   1. Followers
   1. Friends
-  1. Home_timeline
+  1. Home_timeline (by default, selected=True)
   1. Lists
   1. Memberships
   1. Mentions

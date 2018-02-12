@@ -94,6 +94,24 @@ Now you can pipe stream results to a Singer Target e.g.
 
 ``` tap-twitter -c tap-twitter/config.json -s tap-twitter/state.json | target-gsheet -c gsheet.config.json```
 
+### Step 5: Use tap-twitter/state.json to filter results since *since_id*
+
+```
+{
+  "bookmarks": {
+    "favorites" : {
+      "since_id":0
+    },
+    "home_timeline" : {
+      "since_id":0
+    },
+    "mentions" : {
+      "since_id":0
+    }
+  }
+}
+```
+
 ## Before you go...
 
 This tap was developed with Python 3.5. Tested on Singer Docker image singerio/singer-base:0.0.1. 
